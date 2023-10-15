@@ -4154,3 +4154,12 @@ input, select, textarea {
 		}
 
 	}
+
+	.highlight {
+
+	}
+
+	.highlight:hover {
+		box-shadow: #2d3a69;
+
+	}
