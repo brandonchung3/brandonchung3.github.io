@@ -38,9 +38,8 @@
 				<!-- Banner -->
 					<section id="banner">
 						<div class="inner">
-
 							<div class="content">
-								<h2 class="major">Tempus adipiscing</h2>
+								<h1 style="font-size: 30px;" class="major">Brandon Chung</h1>
 								<p>Lorem ipsum dolor sit amet, etiam lorem adipiscing elit. Cras turpis ante, nullam sit amet turpis non, sollicitudin posuere urna. Mauris id tellus arcu. Nunc vehicula id nulla dignissim dapibus. Nullam ultrices, neque et faucibus viverra, ex nulla cursus.</p>
 								<!--<a href="#" class="special">Learn more</a>-->
 							</div>
@@ -93,12 +92,42 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('DOMContentLoaded',function(event){
+				var dataText = [ "Welcome!", "Thanks for visiting.", "I am Brandon Chung."];
+				
+				function typeWriter(text, i, fnCallback) {
+					if (i < (text.length)) {
+						document.getElementsByClassName("major")[0].innerHTML = text.substring(0, i+1) +'<span aria-hidden="true"></span>';
+						setTimeout(function() {
+							typeWriter(text, i + 1, fnCallback)
+						}, 100);
+					}
+					else if (typeof fnCallback == 'function') {
+						setTimeout(fnCallback, 700);
+					}
+				}
+				
+			   function StartAnimation(i) {
+				   if (i < dataText[i].length) {
+					   typeWriter(dataText[i], 0, function(){
+						   StartAnimation(i + 1);
+					   });
+				   }
+			   }
+				
+			  StartAnimation(0);
+			});
+		</script>
+
+			
 
 	</body>
 </html>
