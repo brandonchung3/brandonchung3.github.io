@@ -4163,3 +4163,109 @@ input, select, textarea {
 		box-shadow: #2d3a69;
 
 	}
+
+	/* Introduction */
+
+	.introduction {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		margin: 0 0 2em 0;
+	}
+
+		.introduction .text {
+			-moz-flex: 1;
+			-webkit-flex: 1;
+			-ms-flex: 1;
+			flex: 1;
+		}
+
+			.introduction .text > :last-child {
+				margin-bottom: 0;
+			}
+
+			.introduction .text header.major {
+				margin: 0 0 2em 0;
+			}
+
+		.introduction .image {
+			display: inline-block;
+			margin-left: 4em;
+			padding: 0.65em;
+			border-radius: 100%;
+			border: solid 1px;
+		}
+
+			.introduction .image img {
+				display: block;
+				border-radius: 100%;
+				width: 16em;
+			}
+
+		@media screen and (max-width: 980px) {
+
+			.introduction {
+				-moz-flex-direction: column-reverse;
+				-webkit-flex-direction: column-reverse;
+				-ms-flex-direction: column-reverse;
+				flex-direction: column-reverse;
+				text-align: center;
+			}
+
+				.introduction .text {
+					-moz-flex: 0 1 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					width: 100%;
+				}
+
+					.introduction .text header.major h2:after {
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					.introduction .text .actions {
+						-moz-justify-content: center;
+						-webkit-justify-content: center;
+						-ms-justify-content: center;
+						justify-content: center;
+						width: calc(100% + 1em);
+					}
+
+				.introduction .text {
+					-moz-flex: 0 1 auto;
+					-webkit-flex: 0 1 auto;
+					-ms-flex: 0 1 auto;
+					flex: 0 1 auto;
+					margin-left: 0;
+					margin-bottom: 2em;
+				}
+
+				.introduction .image {
+					margin-left: 0em;
+					margin-bottom: 2em;
+				}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			.introduction .text {
+				padding: 0.35em;
+			}
+
+				.introduction .text img {
+					width: 12em;
+				}
+
+		}
+
+	.introduction .image {
+		border-color: rgba(255, 255, 255, 0.35);
+	}
